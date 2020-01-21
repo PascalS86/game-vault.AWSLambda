@@ -1,0 +1,16 @@
+# Created by https://www.gitignore.io/api/dotnetcore
+# Edit at https://www.gitignore.io/?templates=dotnetcore
+
+### DotnetCore ###
+# .NET Core build folders
+/.vs
+/src/game-vault.aws.lambda.core/bin
+/src/game-vault.aws.lambda.core/obj
+/test/game-vault.aws.lambda.core.Tests/bin
+/test/game-vault.aws.lambda.core.Tests/obj
+
+
+# Additonal files and folders
+/deploy.txt
+
+# End of https://www.gitignore.io/api/dotnetcore
