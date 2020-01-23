@@ -22,6 +22,20 @@
 							"Path": "/",
 							"Method": "GET"
 						}
+					},
+					"RootPost": {
+						"Type": "Api",
+						"Properties": {
+							"Path": "/",
+							"Method": "POST"
+						}
+					},
+					"AccessPost": {
+						"Type": "Api",
+						"Properties": {
+							"Path": "/access",
+							"Method": "POST"
+						}
 					}
 				}
 			}
