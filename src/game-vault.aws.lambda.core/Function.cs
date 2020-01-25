@@ -16,6 +16,7 @@ namespace game_vault.aws.lambda.core
     public class Functions
     {
         private readonly string ACCESS_CHECK = "ACCESS_CHECK";
+        private readonly string ACCESS_CLIENT = "ACCESS_CLIENT";
         /// <summary>
         /// Default constructor that Lambda will invoke.
         /// </summary>
@@ -46,7 +47,7 @@ namespace game_vault.aws.lambda.core
             var response = new APIGatewayProxyResponse
             {
                 StatusCode = (int)HttpStatusCode.OK,
-                Body =  JsonConvert.SerializeObject(await CsandraGame.GetGames(ACCESS_CHECK)),
+                Body =  JsonConvert.SerializeObject(await CsandraGame.GetGames(ACCESS_CLIENT)),
                 Headers = new Dictionary<string, string> { 
                     { "Content-Type", "application/json" } ,
                     { "Access-Control-Allow-Origin", "*" }

@@ -56,6 +56,7 @@ namespace game_vault.aws.lambda.core{
             try{
                if(string.IsNullOrWhiteSpace(client))
                     throw new UnauthorizedAccessException("You didn't pass a valid client");
+                
                 if(data.ID.Contains(client)){
                     using(var context = new DynamoDBContext (SetupDynamoDbClient())){
                         await context.SaveAsync(data);
