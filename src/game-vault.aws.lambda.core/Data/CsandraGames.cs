@@ -14,7 +14,7 @@ namespace game_vault.aws.lambda.core{
     {
         private string id;
         [DynamoDBHashKey] //Partition key
-        public string ID {get=> (string.IsNullOrWhiteSpace(id)?"040488110614_"+Spieltitel: id); set=> id = value;}
+        public string ID {get=> (string.IsNullOrWhiteSpace(id)?"ACCESS_CLIENT"+Spieltitel: id); set=> id = value;}
         public string Spieltitel { get; set; }
         public string Spielerzahl { get; set; }
         public int Komplexitaet { get; set; }
