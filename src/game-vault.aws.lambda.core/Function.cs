@@ -68,7 +68,7 @@ namespace game_vault.aws.lambda.core
             string result = "";
             if(request.Path.Contains("access")){
                 var data = JsonConvert.DeserializeObject<ClientClass>(request.Body);
-                result = data.Client == ACCESS_CHECK?"":"No changes allowed";
+                result = ACCESS_CHECK.Split(',').Count(c=> c.ToLower() == data.Client.ToLower()) > 0?"":"No changes allowed";
             }
             else{
                 var data = JsonConvert.DeserializeObject<DataClass>(request.Body);
