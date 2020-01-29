@@ -73,7 +73,9 @@ namespace game_vault.aws.lambda.core
             }
             else{
                 var data = JsonConvert.DeserializeObject<DataClass>(request.Body);
-                result = await CsandraGame.SaveGame(data.Data, data.Client);
+                result = ACCESS_CHECK.Split(',').Count(c=> c.ToLower() == data.Client.ToLower()) > 0?"":"No changes allowed";
+                if(string.IsNullOrWhiteSpace(result))
+                    result = await CsandraGame.SaveGame(data.Data, ACCESS_CLIENT);
             }
             var response = new APIGatewayProxyResponse
             {
