@@ -11,6 +11,6 @@
     <PackageReference Include="Amazon.Lambda.APIGatewayEvents" Version="1.2.0" />
     <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.104.22" />
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.100.1" />
-    <PackageReference Include="NewtonSoft.json" Version="12.0.3" />
+    <PackageReference Include="NewtonSoft.json" Version="13.0.2" />
   </ItemGroup>
 </Project>
